@@ -11,14 +11,12 @@ else
 end
 
 get '/' do
-  config_file = File.join(File.expand_path(File.dirname(__FILE__)), "config.yml")
-
   @config = {:links => [],
              :title => "OpenID Login",
              :prompt => "An OpenID login is required:"}
 
-  if File.exist?(config_file)
-    @config.merge!(YAML.load_file(config_file))
+  if File.exist?(settings.openid_login_config)
+    @config.merge!(YAML.load_file(settings.openid_login_config))
   end
 
   unless params["modauthopenid.referrer"]

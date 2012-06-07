@@ -33,7 +33,7 @@ the menus in the top menu, a sample yaml config file can be seen here:
       - :url: http://google.com/
         :title: Example Secured Application
 
-This file should be in the same directory as the *login.rb*
+This file should be in the same directory as the *config.ru*
 
 Example?
 ========
