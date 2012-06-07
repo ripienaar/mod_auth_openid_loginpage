@@ -16,9 +16,9 @@ Install this in a vhost using your favorite method like Apache + Passenger
 then configure your mod_auth_openid secured page as follows:
 
        <Location /supersecret>
-			    AuthType                     OpenID
+          AuthType                     OpenID
           AuthOpenIDLoginPage          http://login.your.net/
-					require valid-user
+          require valid-user
       </Location>
 
 For full details on how to configure mod_auth_openid please see it's

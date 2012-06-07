@@ -28,7 +28,7 @@ get '/' do
     if error = params["modauthopenid.error"]
       case error
         when "no_idp_found"
-          @error = "The URL you provided could not be found"
+          @error = "The OpenID URL you provided could not be found"
         when "invalid_id"
           @error = "The ID provided by your OpenID provider is not in the correct format"
         when "idp_not_trusted"
