@@ -1,0 +1,5 @@
+:title: OpenID Login
+:prompt: "An OpenID login is required:"
+:links:
+  - :url: http://google.com/
+    :title: Example Secured Application

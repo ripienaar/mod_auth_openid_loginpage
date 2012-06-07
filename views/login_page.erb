@@ -1,0 +1,9 @@
+<div class="well">
+<h2><%= @config[:prompt] %></h2>
+<br />
+<form class="form-inline" action="<%= params["modauthopenid.referrer"] %>" method="GET">
+  <input type="text" class="input span5" placeholder="OpenID" name="openid_identifier">
+  <button type="submit" class="btn">Sign in</button>
+</form>
+<em><small>Logging into: <%= params["modauthopenid.referrer"] %></small></em>
+</div>
