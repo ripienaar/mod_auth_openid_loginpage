@@ -2,12 +2,12 @@ require 'rubygems'
 require 'sinatra'
 
 set :static, true
-set :views, File.join(File.expand_path(File.dirname(__FILE__)), "views")
+set :views, File.join(File.expand_path(File.dirname(__FILE__)), "..", "views")
 
 if Sinatra.const_defined?("VERSION") && Gem::Version.new(Sinatra::VERSION) >= Gem::Version.new("1.3.0")
-  set :public_folder, File.join(File.expand_path(File.dirname(__FILE__)), "public")
+  set :public_folder, File.join(File.expand_path(File.dirname(__FILE__)), "..", "public")
 else
-  set :public, File.join(File.expand_path(File.dirname(__FILE__)), "public")
+  set :public, File.join(File.expand_path(File.dirname(__FILE__)), "..", "public")
 end
 
 get '/' do
